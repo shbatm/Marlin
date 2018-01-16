@@ -74,7 +74,7 @@
 // User-specified version info of this build to display in [Pronterface, etc] terminal window during
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
-#define STRING_CONFIG_H_AUTHOR "(shbatm, HICTOP i3 Mendel v1.1.6)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(shbatm, HICTOP i3 Mendel v1.1.8)" // Who made the changes.
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
 #define STRING_SPLASH_LINE2 WEBSITE_URL         // will be shown during bootup in line 2
@@ -124,7 +124,7 @@
 
 // Optional custom name for your RepStrap or other custom machine
 // Displayed in the LCD "Ready" message
-#define CUSTOM_MACHINE_NAME "HICi3 3DP-12 v1.1.6" // shbatm: Updated for this printer
+#define CUSTOM_MACHINE_NAME "HICi3 3DP-12 v1.1.8" // shbatm: Updated for this printer
 
 // Define this to set a unique identifier for this printer, (Used by some programs to differentiate between machines)
 // You can use an online service to generate a random UUID. (eg http://www.uuidgenerator.net/version4)
@@ -137,7 +137,7 @@
 #define EXTRUDERS 1
 
 // Generally expected filament diameter (1.75, 2.85, 3.0, ...). Used for Volumetric, Filament Width Sensor, etc.
-#define DEFAULT_NOMINAL_FILAMENT_DIA 3.0
+#define DEFAULT_NOMINAL_FILAMENT_DIA 1.75  // shbatm: Updated from 3.0
 
 // For Cyclops or any "multi-extruder" that shares a single nozzle.
 //#define SINGLENOZZLE
@@ -911,7 +911,7 @@
 #if ENABLED(AUTO_BED_LEVELING_LINEAR) || ENABLED(AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 3
+  #define GRID_MAX_POINTS_X 6       // shbatm: Changed to 6
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Set the boundaries for probing (where the probe can reach).

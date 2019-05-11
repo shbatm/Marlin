@@ -137,7 +137,7 @@
 #define EXTRUDERS 1
 
 // Generally expected filament diameter (1.75, 2.85, 3.0, ...). Used for Volumetric, Filament Width Sensor, etc.
-#define DEFAULT_NOMINAL_FILAMENT_DIA 3.0
+#define DEFAULT_NOMINAL_FILAMENT_DIA 1.75 // shbatm: updated from 3.0
 
 // For Cyclops or any "multi-extruder" that shares a single nozzle.
 //#define SINGLENOZZLE
@@ -529,7 +529,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.3, 80.3, 399, 89.7714036 }  // shbatm: updated based on CL configuration
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.3, 80.3, 399, 119.53 }  // shbatm: updated based on CL configuration
                                                                        // Changed extrusion from 94.4962144 to 95%
 
 /**
@@ -686,7 +686,7 @@
  */
 #define X_PROBE_OFFSET_FROM_EXTRUDER 10  // X offset: -left  +right  [of the nozzle]  // shbatm: updated
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 60  // Y offset: -front +behind [the nozzle]     // shbatm: updated
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.75   // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -1.2   // Z offset: -below +above  [the nozzle]
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000
@@ -911,12 +911,12 @@
 #if ENABLED(AUTO_BED_LEVELING_LINEAR) || ENABLED(AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 3
-  #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
+  #define GRID_MAX_POINTS_X 6
+  #define GRID_MAX_POINTS_Y 8
 
   // Set the boundaries for probing (where the probe can reach).
-  #define LEFT_PROBE_BED_POSITION 10     // shbatm: changed from 20, 3
-  #define RIGHT_PROBE_BED_POSITION 200  // shbatm: changed from 170
+  #define LEFT_PROBE_BED_POSITION 15     // shbatm: changed from 20, 3
+  #define RIGHT_PROBE_BED_POSITION 190  // shbatm: changed from 170
   #define FRONT_PROBE_BED_POSITION 60    // shbatm: changed from 20, 3
   #define BACK_PROBE_BED_POSITION 260   // shbatm: changed from 170, 180
 
@@ -1393,7 +1393,7 @@
 //
 // Add individual axis homing items (Home X, Home Y, and Home Z) to the LCD menu.
 //
-//#define INDIVIDUAL_AXIS_HOMING_MENU
+#define INDIVIDUAL_AXIS_HOMING_MENU
 
 //
 // SPEAKER/BUZZER
